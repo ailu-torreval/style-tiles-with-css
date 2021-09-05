@@ -3,6 +3,7 @@
 @import url("https://fonts.googleapis.com/css?family=Open+Sans:400italic,800italic,400,800");
 /* @import url('https://fonts.googleapis.com/css?family=Open+Sans&display=swap'); */
 @import url("https://fonts.googleapis.com/css?family=Droid+Serif:400,700,400italic,700italic");
+@import url("https://fonts.googleapis.com/css2?family=Berkshire+Swash&display=swap");
 
 * {
   box-sizing: border-box;
@@ -14,14 +15,16 @@ use the fonts in other ways in the font hierarchy etc. */
 
 /* change these */
 :root {
-  --bg-color: red;
-  --link-color: green;
-  --link-hover-color: blue;
-  --color-4: hotpink;
-  --color-5: rebeccapurple;
-
-  --primary-font: "Open Sans", sans-serif;
-  --secondary-font: "Droid Serif", serif;
+  --yellow: #f2b90f;
+  --orange: #f26b1d;
+  --red: #f23827;
+  --grey50: #9d9d9d;
+  --grey100: #595959;
+  --grey200: #302f37;
+  --grey300: #333333;
+  --bg-color: #404040;
+  --primary-font: "Berkshire Swash", cursive;
+  --secondary-font: "Azeret Mono", monospace;
   --main-text-color: #000;
 
   --white-space: 1rem;
@@ -30,9 +33,7 @@ use the fonts in other ways in the font hierarchy etc. */
 button {
   transition: all 3s;
 }
-a {
-  transition: all 3s;
-}
+
 button:hover {
   background-color: var(--link-hover-color);
   transform: scale(3) rotate(40deg);
@@ -42,10 +43,6 @@ button:active {
   background-color: var(--bg-color);
 }
 
-a:hover {
-  color: var(--link-hover-color);
-  font-size: 4rem;
-}
 html {
   font-size: 100%;
   font-family: var(--primary-font);
@@ -65,38 +62,39 @@ footer {
 }
 
 .full-width {
-  background: var(--bg-color);
+  background: var(--grey300);
   color: white;
   width: 100%;
 }
 
 .header-wrapper h1 {
   font-size: 3rem;
-  text-transform: uppercase;
-  letter-spacing: -2px;
+  letter-spacing: 0px;
   padding-right: 0.75em;
   font-weight: bold;
-  color: white;
+  color: var(--yellow);
 }
 
 .header-wrapper h2 {
   font-size: 1.6em;
-  color: rgba(255, 255, 255, 0.95);
-  font-weight: bold;
+  color: var(--red);
   margin: var(--white-space) 0;
 }
 
 .header-wrapper h3 {
   font-size: 1.2rem;
   font-style: italic;
+  color: var(--orange);
 }
 
 .header-wrapper h4 {
   font-size: 0.8rem;
+  color: var(--orange);
 }
 
 main {
   padding: calc(2 * var(--white-space));
+  background: var(--bg-color);
 }
 
 section {
@@ -126,23 +124,23 @@ ul li:last-child {
 }
 
 .color-swatch-1 {
-  background-color: var(--bg-color);
+  background-color: var(--yellow);
 }
 
 .color-swatch-2 {
-  background-color: var(--link-color);
+  background-color: var(--orange);
 }
 
 .color-swatch-3 {
-  background-color: var(--link-hover-color);
+  background-color: var(--red);
 }
 
 .color-swatch-4 {
-  background-color: var(--color-4);
+  background-color: var(--grey100);
 }
 
 .color-swatch-5 {
-  background-color: var(--color-5);
+  background-color: var(--grey300);
 }
 
 .textures li {
@@ -152,19 +150,21 @@ ul li:last-child {
 }
 
 .texture-swatch-1 {
-  background: url(../img/pw_maze_white.png) top left repeat;
+  background: url(../img/texture1.png) top left repeat;
 }
 
 .texture-swatch-2 {
-  background: url(../img/subtle_grunge.png) top left repeat;
+  background: url(../img/texture4.png) center repeat;
+  background-size: 110%;
 }
 
 .texture-swatch-1 {
-  background: url(../img/pw_maze_white.png) top left repeat;
+  background: url(../img/texture1.png) top left repeat;
 }
 
 .texture-swatch-3 {
-  background: url(../img/white_paperboard.png) top left repeat;
+  background: url(../img/texture3.png) top left repeat;
+  background-size: 100%;
 }
 
 .images ul {
@@ -206,18 +206,20 @@ button:focus-within {
 }
 
 .typography-main {
-  color: var(--main-text-color);
+  color: var(--grey50);
 }
 
 .h1-sample {
   font-size: 2.4rem;
   font-weight: bold;
+  color: var(--yellow);
 }
 
 .h2-sample {
   font-family: var(--secondary-font);
   font-style: italic;
   font-size: 1.25rem;
+  color: var(--grey50);
 }
 
 p.typography-sample {
@@ -236,10 +238,13 @@ em {
 
 a {
   font-family: var(--primary-font);
-  color: var(--link-color);
+  color: var(--grey50);
   font-weight: bold;
   text-decoration: none;
-  transition: all 0.2s;
+}
+
+a:hover {
+  color: var(--yellow);
 }
 
 p[class*="font-details-"] {
@@ -252,7 +257,7 @@ p[class*="font-details-"] {
 
 .adjectives ul {
   font-size: 2rem;
-  opacity: 0.5;
+  color: var(--yellow);
 }
 
 .adjectives ul {
