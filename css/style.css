@@ -1,46 +1,74 @@
-/* change these */
-
-@import url("https://fonts.googleapis.com/css?family=Open+Sans:400italic,800italic,400,800");
-/* @import url('https://fonts.googleapis.com/css?family=Open+Sans&display=swap'); */
-@import url("https://fonts.googleapis.com/css?family=Droid+Serif:400,700,400italic,700italic");
-@import url("https://fonts.googleapis.com/css2?family=Berkshire+Swash&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Days+One&family=Montserrat&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Days+One&display=swap");
 
 * {
   box-sizing: border-box;
+  margin: 0;
+  padding: 0;
 }
 
-/* THIS IS ALL meant for editing. You might want to do it differently, 
-name the variables differently, 
-use the fonts in other ways in the font hierarchy etc. */
-
-/* change these */
 :root {
-  --yellow: #f2b90f;
-  --orange: #f26b1d;
-  --red: #f23827;
+  --yellow: #f9d502;
   --grey50: #9d9d9d;
   --grey100: #595959;
   --grey200: #302f37;
   --grey300: #333333;
   --bg-color: #404040;
-  --primary-font: "Berkshire Swash", cursive;
-  --secondary-font: "Azeret Mono", monospace;
-  --main-text-color: #000;
 
-  --white-space: 1rem;
+  --primary-font: "Days One", sans-serif;
+  --secondary-font: "Montserrat", sans-serif;
+  --main-text-color: #9d9d9d;
 }
 
-button {
-  transition: all 3s;
-}
-
-button:hover {
+/* button:hover {
   background-color: var(--link-hover-color);
   transform: scale(3) rotate(40deg);
 }
 
 button:active {
   background-color: var(--bg-color);
+} */
+
+.secondary-button {
+  width: 40px;
+  height: 40px;
+  background-color: var(--yellow);
+  border: none;
+  color: var(--grey100);
+  text-align: center;
+  text-decoration: none;
+  margin: 20px 20px;
+  border-radius: 50%;
+  list-style: none;
+}
+
+.secondary-button:hover {
+  box-shadow: 0 0 5px var(--grey50);
+  cursor: pointer;
+}
+
+.secondary-button:active {
+  box-shadow: 0 0 5px var(--grey50);
+  transform: translateY(4px);
+}
+
+.primary-button {
+  background-color: var(--bg-color);
+  width: 200px;
+  height: 3rem;
+  font-size: 1.3rem;
+  color: var(--yellow);
+  border-radius: 20px;
+}
+
+.primary-button:hover {
+  box-shadow: 0 0 5px var(--grey50);
+  cursor: pointer;
+}
+
+.primary-button:active {
+  box-shadow: 0 0 5px var(--grey50);
+  transform: translateY(4px);
 }
 
 html {
@@ -53,6 +81,11 @@ img {
   height: auto;
 }
 
+body {
+  /* background-color: var(--bg-color); */
+  background-image: url("/img/darkbackground.png");
+}
+
 header,
 main,
 footer {
@@ -62,6 +95,8 @@ footer {
 }
 
 .full-width {
+  padding-top: 2rem;
+  padding-bottom: 2rem;
   background: var(--grey300);
   color: white;
   width: 100%;
@@ -94,7 +129,7 @@ footer {
 
 main {
   padding: calc(2 * var(--white-space));
-  background: var(--bg-color);
+  background-image: url("/img/darkbackground.png");
 }
 
 section {
@@ -128,11 +163,7 @@ ul li:last-child {
 }
 
 .color-swatch-2 {
-  background-color: var(--orange);
-}
-
-.color-swatch-3 {
-  background-color: var(--red);
+  background-color: var(--grey300);
 }
 
 .color-swatch-4 {
@@ -140,7 +171,11 @@ ul li:last-child {
 }
 
 .color-swatch-5 {
-  background-color: var(--grey300);
+  background-color: var(--main-text-color);
+}
+
+.color-swatch-3 {
+  background-color: var(--bg-color);
 }
 
 .textures li {
@@ -178,7 +213,7 @@ ul li:last-child {
   margin-bottom: 1rem;
 }
 
-button {
+/* button {
   padding: 1rem;
   border-radius: 4px;
   background: var(--link-color);
@@ -192,9 +227,9 @@ button {
   transition: all 0.2s ease;
   cursor: pointer;
   margin: 0 1rem 1rem 0;
-}
+} */
 
-.secondary-button {
+/* .secondary-button {
   background: var(--color-5);
 }
 
@@ -203,7 +238,7 @@ button:active,
 button:focus-within {
   outline: 0;
   border-radius: 4px;
-}
+} */
 
 .typography-main {
   color: var(--grey50);
